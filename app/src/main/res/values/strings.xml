@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="this_is_result">Il risultato è:</string>
+    <string name="calculate_sum">Calculate Sum</string>
+    <string name="value_all_fields_to_continue">Please complete all the fields to continue</string>
+    <string name="you_choose">Hai scelto:\n%1$s di %2$s!</string>
+</resources>

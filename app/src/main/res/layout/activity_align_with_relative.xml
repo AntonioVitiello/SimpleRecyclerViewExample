@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/head_1"
+        android:text="First Column"
+        style="@style/SmallTextView"/>
+
+    <TextView
+        android:id="@+id/head_2"
+        android:layout_toRightOf="@id/head_1"
+        android:layout_alignLeft="@+id/butt_1"
+        android:layout_alignRight="@id/butt_1"
+        android:text="Sec Column"
+        style="@style/SmallTextView"/>
+
+    <TextView
+        android:id="@+id/head_3"
+        android:layout_toRightOf="@id/head_2"
+        android:layout_alignLeft="@+id/butt_2"
+        android:layout_alignRight="@id/butt_2"
+        android:text="Third Column"
+        style="@style/SmallTextView"/>
+
+    <Button
+        android:id="@id/butt_1"
+        android:layout_below="@id/head_2"
+        android:layout_toRightOf="@id/head_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border_and_gray_background"
+        android:layout_margin="12dp"
+        />
+
+    <Button
+        android:id="@id/butt_2"
+        android:layout_below="@id/head_3"
+        android:layout_toRightOf="@id/butt_1"
+        android:layout_alignBaseline="@id/butt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border_and_gray_background"
+        android:layout_margin="12dp"
+        />
+
+    <Button
+        android:id="@+id/butt_3"
+        android:layout_below="@id/butt_2"
+        android:layout_toRightOf="@id/butt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_border_and_gray_background"
+        android:layout_marginTop="12dp"
+        android:layout_margin="12dp"
+        />
+
+</RelativeLayout>

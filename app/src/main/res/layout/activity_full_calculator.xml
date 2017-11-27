@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.exercise.MainActivityFullCalculator">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/plus_col_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:ems="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/op_plus"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/op_plus"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="+"
+            app:layout_constraintBottom_toTopOf="@+id/plus_col_1"
+            app:layout_constraintLeft_toRightOf="@+id/plus_col_1"
+            app:layout_constraintRight_toLeftOf="@+id/plus_col_2"
+            app:layout_constraintTop_toBottomOf="@+id/plus_col_1" />
+
+        <EditText
+            android:id="@+id/plus_col_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+
+            android:ems="3"
+            app:layout_constraintBottom_toTopOf="@+id/op_plus"
+            app:layout_constraintLeft_toRightOf="@+id/op_plus"
+            app:layout_constraintRight_toLeftOf="@+id/eq_plus"
+            app:layout_constraintTop_toBottomOf="@+id/op_plus"
+            tools:text="2" />
+
+        <Button
+            android:id="@+id/eq_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:onClick="calculatePlus"
+            android:text="="
+            app:layout_constraintBottom_toTopOf="@+id/plus_col_2"
+            app:layout_constraintLeft_toRightOf="@+id/plus_col_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plus_col_2" />
+
+        <EditText
+            android:id="@+id/minus_col_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="3"
+
+            app:layout_constraintLeft_toLeftOf="@+id/plus_col_1"
+            app:layout_constraintRight_toRightOf="@+id/plus_col_1"
+            app:layout_constraintTop_toBottomOf="@+id/plus_col_1"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/op_minus"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/minus_col_1"
+            app:layout_constraintLeft_toRightOf="@+id/minus_col_1"
+            app:layout_constraintRight_toLeftOf="@+id/minus_col_2"
+            app:layout_constraintTop_toTopOf="@+id/minus_col_1" />
+
+        <EditText
+            android:id="@+id/minus_col_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:ems="3"
+            app:layout_constraintLeft_toLeftOf="@+id/plus_col_2"
+            app:layout_constraintRight_toRightOf="@+id/plus_col_2"
+            app:layout_constraintTop_toTopOf="@+id/minus_col_1"
+            tools:text="6" />
+
+        <Button
+            android:id="@+id/eq_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:onClick="calculateMinus"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/minus_col_2"
+            app:layout_constraintLeft_toLeftOf="@+id/eq_plus"
+            app:layout_constraintRight_toRightOf="@+id/eq_plus"
+            app:layout_constraintTop_toTopOf="@+id/minus_col_2" />
+
+
+        <EditText
+            android:id="@+id/for_col_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/minus_col_1"
+            app:layout_constraintRight_toRightOf="@+id/minus_col_1"
+            app:layout_constraintTop_toBottomOf="@+id/minus_col_1"
+            tools:text="7" />
+
+        <TextView
+            android:id="@+id/op_for"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:text="*"
+            app:layout_constraintBottom_toBottomOf="@+id/for_col_1"
+            app:layout_constraintLeft_toRightOf="@+id/for_col_1"
+            app:layout_constraintRight_toLeftOf="@+id/for_col_2"
+            app:layout_constraintTop_toTopOf="@+id/for_col_1" />
+
+        <EditText
+            android:id="@+id/for_col_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:ems="3"
+            app:layout_constraintBottom_toBottomOf="@+id/for_col_1"
+            app:layout_constraintLeft_toLeftOf="@+id/minus_col_2"
+            app:layout_constraintRight_toRightOf="@+id/minus_col_2"
+            app:layout_constraintTop_toTopOf="@+id/for_col_1"
+            tools:text="3" />
+
+        <Button
+            android:id="@+id/eq_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:onClick="calculateFor"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/for_col_2"
+            app:layout_constraintLeft_toLeftOf="@+id/eq_minus"
+            app:layout_constraintRight_toRightOf="@+id/eq_minus"
+            app:layout_constraintTop_toTopOf="@+id/for_col_2" />
+
+        <EditText
+            android:id="@+id/factorial_col1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="3"
+
+            app:layout_constraintLeft_toLeftOf="@+id/for_col_1"
+            app:layout_constraintRight_toRightOf="@+id/for_col_1"
+            app:layout_constraintTop_toBottomOf="@+id/for_col_1"
+            tools:text="7" />
+
+        <TextView
+            android:id="@+id/op_factorial"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:text="!"
+            app:layout_constraintBottom_toBottomOf="@+id/factorial_col1"
+            app:layout_constraintLeft_toRightOf="@+id/factorial_col1"
+            app:layout_constraintRight_toLeftOf="@+id/for_col_2"
+            app:layout_constraintTop_toTopOf="@+id/factorial_col1" />
+
+        <Button
+            android:id="@+id/eq_factorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:onClick="calculateFactorial"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/factorial_col1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/eq_for"
+            app:layout_constraintRight_toRightOf="@+id/eq_for"
+            app:layout_constraintTop_toTopOf="@+id/factorial_col1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/power_col1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:ems="3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/factorial_col1"
+            app:layout_constraintRight_toRightOf="@+id/factorial_col1"
+            app:layout_constraintTop_toBottomOf="@+id/factorial_col1"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/op_power"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:text="^"
+            app:layout_constraintBottom_toBottomOf="@+id/power_col1"
+            app:layout_constraintLeft_toRightOf="@+id/power_col1"
+            app:layout_constraintRight_toLeftOf="@+id/power_col2"
+            app:layout_constraintTop_toTopOf="@+id/power_col1" />
+
+        <EditText
+            android:id="@+id/power_col2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:ems="3"
+            app:layout_constraintBottom_toBottomOf="@+id/power_col1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/for_col_2"
+            app:layout_constraintRight_toRightOf="@+id/for_col_2"
+            app:layout_constraintTop_toTopOf="@+id/power_col1"
+            tools:text="2" />
+
+        <Button
+            android:id="@+id/eq_elev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:onClick="calculatePower"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/power_col2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/eq_factorial"
+            app:layout_constraintRight_toRightOf="@+id/eq_factorial"
+            app:layout_constraintTop_toTopOf="@+id/power_col2" />
+
+        <TextView
+            android:id="@+id/eq_tot"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:text="="
+            app:layout_constraintBottom_toBottomOf="@+id/tot_col2"
+            app:layout_constraintLeft_toRightOf="@+id/power_col1"
+            app:layout_constraintRight_toLeftOf="@+id/power_col2"
+            app:layout_constraintTop_toTopOf="@+id/tot_col2" />
+
+        <TextView
+            android:id="@+id/tot_col2"
+            style="@style/BigTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintLeft_toLeftOf="@+id/power_col2"
+            app:layout_constraintRight_toRightOf="@+id/power_col2"
+            app:layout_constraintTop_toBottomOf="@+id/power_col2"
+            tools:text="-2" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
